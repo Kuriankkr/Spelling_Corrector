@@ -9,6 +9,7 @@ The notebooks repo has an example of the code that has been implemented and how 
 - 7z a Spelling_Corrector.zip lambda_function.py big.txt Utilities.py
 
 **Step 2: Creating IAM Role for your lambda**
+
 You need to create your IAM role sourcing the role document from the Project repo, the file is called lambda_role.json
 - aws iam create-role --role-name Spelling-Correct-Role --assume-role-policy-document file://lambda_role.json
 
