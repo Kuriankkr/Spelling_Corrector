@@ -6,4 +6,5 @@ inside of a lambda and attach an endpoint.
 The notebooks repo has an example of the code that has been implemented and how the backend (spelling corrector) logic works. 
 
 **Step 1: Zip up the following files that are present in the Project Repo**
+
  7z a Spelling_Corrector.zip lambda_function.py big.txt Utilities.py
