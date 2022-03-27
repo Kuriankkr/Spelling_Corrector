@@ -5,12 +5,12 @@ inside of a lambda and attach an endpoint.
 
 The notebooks repo has an example of the code that has been implemented and how the backend (spelling corrector) logic works. 
 
-**Step 1: Zip up the following files that are present in the Project Repo**
+### Step 1: Zip up the following files that are present in the Project Repo
 - 7z a Spelling_Corrector.zip lambda_function.py big.txt Utilities.py
 
-**Step 2: Creating IAM Role for your lambda**
-
+### Step 2: Creating IAM Role for your lambda**
 You need to create your IAM role sourcing the role document from the Project repo, the file is called lambda_role.json
+
 - aws iam create-role --role-name Spelling-Correct-Role --assume-role-policy-document file://lambda_role.json
 
 
