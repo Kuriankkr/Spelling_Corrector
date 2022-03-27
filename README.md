@@ -13,4 +13,14 @@ You need to create your IAM role sourcing the role document from the Project rep
 
 - aws iam create-role --role-name Spelling-Correct-Role --assume-role-policy-document file://lambda_role.json
 
+### Step 3: Creating the lambda function
+In here, firstly you need to get the arn of your role to a variable and then pass it as a parameter while you create your lambda function along with your zipped file that you had done in Step 1
+
+- aws lambda create-function --function-name Spelling_Corrector --runtime python3.8 --handler lambda_function.lambda_handler --timeout 300  --role ${Role_arn} --zip-file fileb://Spelling_Corrector.zip
+
+### Step 4: Creating the API endpoint 
+Firstly we need to get some variables in:
+- ACCOUNT_NUMBER=**Insert your account number**
+- 
+
 
