@@ -39,6 +39,6 @@ Finally attaching the resource role to your lambda
 
 ## Step 6: Invoking your endpoint
 You can now trigger your lambda using your api endpoint (which you can get using your console, you need to replace your url here, add your resource and the querystring, which is the input word of which you want to see the correction)
-curl https://oqzcb6to2d.execute-api.us-east-1.amazonaws.com/word?somthing
+- curl https://oqzcb6to2d.execute-api.us-east-1.amazonaws.com/word?somthing
 
 You can also try the same using your browser using the images below
