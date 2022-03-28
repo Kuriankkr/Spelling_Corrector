@@ -5,20 +5,20 @@ inside of a lambda and attach an endpoint.
 
 The notebooks repo has an example of the code that has been implemented and how the backend (spelling corrector) logic works. 
 
-### Step 1: Zip up the following files that are present in the Project Repo
+## Step 1: Zip up the following files that are present in the Project Repo
 - 7z a Spelling_Corrector.zip lambda_function.py big.txt Utilities.py
 
-### Step 2: Creating IAM Role for your lambda**
+## Step 2: Creating IAM Role for your lambda**
 You need to create your IAM role sourcing the role document from the Project repo, the file is called lambda_role.json
 
 - aws iam create-role --role-name Spelling-Correct-Role --assume-role-policy-document file://lambda_role.json
 
-### Step 3: Creating the lambda function
+## Step 3: Creating the lambda function
 In here, firstly you need to get the arn of your role to a variable and then pass it as a parameter while you create your lambda function along with your zipped file that you had done in Step 1
 
 - aws lambda create-function --function-name Spelling_Corrector --runtime python3.8 --handler lambda_function.lambda_handler --timeout 300  --role ${Role_arn} --zip-file fileb://Spelling_Corrector.zip
 
-### Step 4: Creating your API endppoint
+## Step 4: Creating your API endppoint
 Lets first create the API endpoint
 - aws apigatewayv2 create-api --name spelling-api-sample --protocol-type HTTP --route-key "GET /word" --target ${LAMBDA_ARN}
 
