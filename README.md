@@ -29,7 +29,7 @@ This is a bit sticky (and I was lazy to get the API_ARN so I had to frame it mys
 
 Next you would need to frame your API_ARN string, run the following git bash commands
 - API_ARN="arn:aws:execute-api:us-east-1:ACCOUNT_NUMBER:API_ID/*/*/word"
--
+
 Substituting your ACCOUNT_NUBMER and API_ID in the API_ARN
 - API_ARN=${API_ARN/ACCOUNT_NUMBER/${ACCOUNT_NUMBER}}
 - API_ARN=${API_ARN/API_ID/${API_ID}
@@ -37,7 +37,8 @@ Substituting your ACCOUNT_NUBMER and API_ID in the API_ARN
 Finally attaching the resource role to your lambda
 - aws lambda add-permission --statement-id 1 --action lambda:InvokeFunction --function-name ${LAMBDA_ARN} --principal apigateway.amazonaws.com --source-arn ${API_ARN}
 
+## Step 6: Invoking your endpoint
 You can now trigger your lambda using your api endpoint (which you can get using your console, you need to replace your url here, add your resource and the querystring, which is the input word of which you want to see the correction)
 curl https://oqzcb6to2d.execute-api.us-east-1.amazonaws.com/word?somthing
 
-
+You can also try the same using your browser using the images below
