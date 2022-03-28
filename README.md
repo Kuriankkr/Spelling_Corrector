@@ -42,3 +42,10 @@ You can now trigger your lambda using your api endpoint (which you can get using
 - curl https://oqzcb6to2d.execute-api.us-east-1.amazonaws.com/word?somthing
 
 You can also try the same using your browser using the images below
+
+<p>
+  <img width="100" align='left' src="https://github.com/Kuriankkr/Spelling_Corrector/blob/main/Example_images/Screenshot%202022-03-27%20201500.png">
+</p>
+<p>
+  <img width="100" align='left' src="https://github.com/Kuriankkr/Spelling_Corrector/blob/main/Example_images/Screenshot%202022-03-27%20201515.png">
+</p>
