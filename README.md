@@ -26,7 +26,7 @@ Lets first create the API endpoint
 This is a bit sticky (and I was lazy to get the API_ARN so I had to frame it myself, firstly we need to get some variables in, so you would need to run the folliwng commands in order:
 - ACCOUNT_NUMBER=(**Insert your account number**)
 - API_ID=$(aws apigatewayv2 get-apis | jq '.[]|.[]|.ApiId' | tr -d '"')
-- 
+
 Next you would need to frame your API_ARN string, run the following git bash commands
 - API_ARN="arn:aws:execute-api:us-east-1:ACCOUNT_NUMBER:API_ID/*/*/word"
 -
